@@ -57,18 +57,18 @@ var orm = {
       cb(result);
     });
   },
-  selectValue: function(tableName, col, val, cb){
+  selectValue: function(tableName, col, val, cb) {
     var queryString = "SELECT " + col.toString();
     queryString += " FROM " + tableName;
     queryString += " WHERE " + val;
 
-    console.log(queryString)
+    console.log(queryString);
 
-    connection.query(queryString, function (err, result){
+    connection.query(queryString, function(err, result) {
       if (err) throw err;
-      cb(result)
-    })
-  }
+      cb(result);
+    });
+  },
   // The third method is the create function which inputs new data into the database
   create: function(table, col, val, cb) {
     var queryString = "INSERT INTO " + table;

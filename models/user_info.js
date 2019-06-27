@@ -16,11 +16,11 @@ var userInfo = {
       cb(res);
     });
   },
-  selectValue: function(col, val, cb){
-    orm.selectValue("user_info", col, val, function (res){
-      cb(res)
-    })
-  }
+  selectValue: function(col, val, cb) {
+    orm.selectValue("user_info", col, val, function(res) {
+      cb(res);
+    });
+  },
   // We use create to add data to the database
   create: function(col, val, cb) {
     orm.create("user_info", col, val, function(res) {

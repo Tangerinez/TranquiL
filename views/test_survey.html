@@ -20,11 +20,11 @@
   <body>
     <form>
       <div class="form-group">
-        <label for="name">username</label>
+        <label for="username">username</label>
         <input
           type="name"
           class="form-control"
-          id="name"
+          id="username"
           placeholder="type your name here"
         />
       </div>
@@ -86,18 +86,17 @@
           <option>5</option>
         </select>
       </div>
-      <button
-        id="survey"
-        type="submit"
-        href="/api/survey"
-        class="btn btn-primary"
-      >
+      <button id="survey" type="submit" class="btn btn-primary">
         Submit
       </button>
     </form>
     <script type="text/javascript">
-      $("#survey").on("click", function() {
+      // When we click on the submit button
+      $("button[type=submit]").on("click", function() {
+        // We make sure that it doesn't do what its supposed to
         event.preventDefault();
+
+        // We capture the users input, in this case the most important thing is the answers to the survey
         var userInput = {
           name: $("#name")
             .val()
@@ -107,19 +106,27 @@
             .trim(),
           data: []
         };
+        // here we have to give every question the same class name so we can capture how many questions we have
+        var answerCount = document.getElementsByClassName("").length;
 
-        var answer = $("#question1").val();
-        console.log(answer);
-
+        // Then we can set the itteration  to answerCount so we itterate through all the questions
         for (let i = 1; i < 5; i++) {
+          // if we give every question the same structure for the ID (in this case question  + a number)
           var userScore = $("#question" + [i]).val();
+
+          // we can itterate through all the questions and capture their values which we push into a array
           userInput.data.push(userScore);
         }
+
+        // we check, and check again, until we can't check no more
         console.log(userInput);
 
+        // We send everything off with a bow and ribbon to the server
         $.post("/api/survey", userInput, function(data) {
           console.log(data);
-          location.reload();
+
+          // And present a new route to the server which will hit a get request which will in this case give us the results page
+          window.location.replace("/result");
         });
       });
     </script>

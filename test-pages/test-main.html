@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" id="main">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/uyn2mmb.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.css" media="screen,projection"/>
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+
+    <title>Tranquil Application</title>
+
+</head>
+
+<body id="mainBody">
+    
+    <header>
+        <!-- Header Nav Section    -->
+        <nav class="mainHeader z-depth-0">
+            
+            <div class="nav-wrapper">
+
+                <a href="main.html" class="brand-logo black-text">(Logo) Tranquil</a>
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="black-text" href="main.html">Home</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Login Card -->
+        <div class="container">
+
+            <div class="row valign-wrapper">
+                                        
+                <div class="card col s12 m10 l11 valign center" id="loginCard">
+
+                    <div class="card-content">
+                        
+                        <h4 class="header">(logo) Tranquil</h4>
+
+                        <span class="card-title">  
+                            <h6 class="header">Please Sign in</h6>
+                        </span>
+
+                        <!-- Form to login -->
+                        <form >
+
+                            <div class="input-field">
+                                <i class="material-icons prefix">person</i>
+                                <input type="text" id="userId" class="validate" >
+                                <label for="userId">User Id</label>
+                            </div>
+    
+                            <div class="input-field">
+                                <i class="material-icons prefix">lock_outline</i>
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                            
+                        </form>
+                        
+                        <!-- Login Button -->
+                        <div class="card-action">
+                                <button class="btn waves-effect waves-light" type="submit" name="action" href="/result">Login</button>
+                        </div>
+                        <!-- Link to Register -->
+                        <div class="card-action">
+                            <p>New to our site? <a class="modal-trigger" href="#registerModal">Register here</a></p>
+    
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <!-- Modal for User Registration -->
+
+        <div id="registerModal" class="modal">
+
+            <div class="modal-content valign center" id="registerForm">
+
+                <form class="center">
+
+                    <h4 class="header">(logo) Tranquil</h4>
+
+                    <span class="card-title">
+                        
+                        <h6 class="header">Please Register</h6>
+                        
+                    </span>
+                    <div class="input-field">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" id="input-username" class="validate" >
+                        <label for="userId">Your Name</label>
+                        
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">person_add</i>
+                        <input type="text" id="input-userID" class="validate" >
+                        <label for="userId">User Id</label>
+                        <!-- <p>UserId should be no more than 8</p> -->
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="input-password" type="password" class="validate">
+                        <label for="password">Password</label>
+                        <p>*Note: Password must be 8 to 20 charachters long.</p>
+                    </div>
+                                
+                    <!-- Login -->
+                    <div class="card-action">
+                            <button class="btn waves-effect waves-light" type="submit" name="action" href="/survey">Submit</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+ 
+    </main>
+
+    <!-- Site Footer -->
+    <footer style="position:fixed;bottom:0;left:0;width:100%;">
+           
+        <div class="footer-copyright">
+
+            <div>
+                 © 2019 Copyright
+                <a class="black-text right" href="main.html">Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JavaScript -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- Modal Script -->
+    <script>
+    </script>
+
+</body> 
+
+</html>

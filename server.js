@@ -21,5 +21,5 @@ var routes = require("./controller/tranquilController");
 app.use(routes);
 
 app.listen(PORT, function() {
-  console.log("Server listening at https://localhost" + PORT);
+	console.log("Server listening at https://localhost:" + PORT);
 });
