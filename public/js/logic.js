@@ -1,11 +1,11 @@
-var profiles = require("./user-profiles");
+// var profiles = require("./user-profiles");
 
-var userInput = {
-  name: "",
-  password: "",
-  category: "",
-  data: []
-};
+// var userInput = {
+//   name: $("input[id=input-username]").val(),
+//   password: "",
+//   category: "",
+//   data: []
+// };
 
 var mockName = "Luc";
 var mockPassword = "Tang";
@@ -27,54 +27,58 @@ userInput.password = mockPassword;
 //                - If current username already exists then user must choose another username
 // 2. If username and password are BOTH valid, then the new user's data will get stored in our database
 // 3. Once user fills out the form, user is automatically logged in and their results are generated
-// $("#sign-up-button").on("click", function(event) {
-//   event.preventDefault();
-//   var username = $("#inputID").val();
-//   var password = $("#input-password").val();
-//   var existingUsernameArray = [];
+$("#register-submit").on("click", function(event) {
+  event.preventDefault();
+  var userInput = {
+    name: $("#input-name").val(),
+    username: $("#input-userId").val(),
+    password: $("#input-password").val()
+  };
 
-//   if (username === "") {
-//     // if user's username input is blank
-//     $("#existing-username-text").remove();
-//     $("#password-length-wrong").remove();
-//     $("#blank-username-text").remove();
-//     blankUsername(); // Appends an error message below input field
-//   } else if (
-//     existingUsernameArray.includes(username) === true &&
-//     (password.length >= 8 && password.length <= 20)
-//   ) {
-//     // if there is already an existing username
-//     $("#existing-username-text").remove();
-//     $("#password-length-wrong").remove();
-//     $("#blank-username-text").remove();
-//     takenUsername(); // Appends existing username error message below input field
-//   } else if (
-//     existingUsernameArray.includes(username) === false &&
-//     (password.length < 8 || password.length > 20)
-//   ) {
-//     // if the password is an invalid length
-//     $("#existing-username-text").remove();
-//     $("#password-length-wrong").remove();
-//     $("#blank-username-text").remove();
-//     invalidPasswordLength(); // Appends invalid password length message below input field
-//   } else if (
-//     existingUsernameArray.includes(username) === true &&
-//     (password.length < 8 || password.length > 20)
-//   ) {
-//     // if there is already an existing username and password is an invalid length
-//     $("#existing-username-text").remove();
-//     $("#password-length-wrong").remove();
-//     $("#blank-username-text").remove();
-//     takenUsername();
-//     invalidPasswordLength();
-//   } else if (
-//     existingUsernameArray.includes(username) === false && // *SUCCESS CASE = LUC*
-//     (password.length >= 8 && password.length <= 20)
-//   ) {
-//     // if user's username does not exist, and password is WITHIN length
-//     // MORE LOGIC HERE
-//   }
-// });
+  var existingUsernameArray = [];
+
+  if (username === "") {
+    // if user's username input is blank
+    $("#existing-username-text").remove();
+    $("#password-length-wrong").remove();
+    $("#blank-username-text").remove();
+    blankUsername(); // Appends an error message below input field
+  } else if (
+    existingUsernameArray.includes(username) === true &&
+    (password.length >= 8 && password.length <= 20)
+  ) {
+    // if there is already an existing username
+    $("#existing-username-text").remove();
+    $("#password-length-wrong").remove();
+    $("#blank-username-text").remove();
+    takenUsername(); // Appends existing username error message below input field
+  } else if (
+    existingUsernameArray.includes(username) === false &&
+    (password.length < 8 || password.length > 20)
+  ) {
+    // if the password is an invalid length
+    $("#existing-username-text").remove();
+    $("#password-length-wrong").remove();
+    $("#blank-username-text").remove();
+    invalidPasswordLength(); // Appends invalid password length message below input field
+  } else if (
+    existingUsernameArray.includes(username) === true &&
+    (password.length < 8 || password.length > 20)
+  ) {
+    // if there is already an existing username and password is an invalid length
+    $("#existing-username-text").remove();
+    $("#password-length-wrong").remove();
+    $("#blank-username-text").remove();
+    takenUsername();
+    invalidPasswordLength();
+  } else if (
+    existingUsernameArray.includes(username) === false && // *SUCCESS CASE = LUC*
+    (password.length >= 8 && password.length <= 20)
+  ) {
+    // if user's username does not exist, and password is WITHIN length
+    // MORE LOGIC HERE
+  }
+});
 
 // // (For existing users that are logging in)
 // $("#login-button").on("click", function(event) {
