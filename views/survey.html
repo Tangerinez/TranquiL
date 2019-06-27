@@ -11,11 +11,11 @@
 <!-- Adobe Font -->
 <link rel="stylesheet" href="https://use.typekit.net/uyn2mmb.css">
 <!-- Materialize.css sheet -->
-<link type="text/css" rel="stylesheet" href="../public/assets/css/materialize.css" media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="assets/css/materialize.css" media="screen,projection"/>
 <!-- Materialize Icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="../public/assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
 <title>Tranquil Survey</title>
 
@@ -60,21 +60,47 @@
                             <button class="card emoji z-depth-0" id="" value="">😀</button>
                             <button class="card emoji z-depth-0" id="" value="">😀</button>  
                         </div>
+                        <a class="btn waves-effect white grey-text darken-text-2" id="">Select Answer</a>
                     </div>
 
                 </div>
                 <div class="carousel-item  white-text" href="#two!">
 
                     <div class="survey-question">
-                        <h3 class="white-text">Select the level of your mood:</h3>
+                        <h3 class="white-text">How much control do you have for the important things in your life?</h3>
 
-                        <div class="row ">
-                            <button class="card emoji z-depth-0" id="" value="">😀</button>
-                            <button class="card emoji z-depth-0" id="" value="">😀</button>
-                            <button class="card emoji z-depth-0" id="" value="">😀</button>
-                            <button class="card emoji z-depth-0" id="" value="">😀</button>
-                            <button class="card emoji z-depth-0" id="" value="">😀</button>     
-                        </div>
+                                <form action="#">
+                                        <p>
+                                          <label>
+                                            <input name="group1" type="radio" checked />
+                                            <span>No Control</span>
+                                          </label>
+                                        </p>
+                                        <p>
+                                          <label>
+                                            <input name="group1" type="radio" />
+                                            <span>A Little Control</span>
+                                          </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="group1" type="radio"  />
+                                                <span>Neutral</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input class="with-gap" name="group1" type="radio"  />
+                                                <span>Some Control</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                                <label>
+                                                    <input class="with-gap" name="group1" type="radio"  />
+                                                    <span>Full Control</span>
+                                                </label>
+                                            </p>
+                                      </form> 
                     </div>
 
                 </div>
@@ -85,11 +111,39 @@
                         <h3 class="white-text">How well rested rested you?</h3>
 
                         <div class="row ">
-                            <button class="card z-depth-0" id="" value="">Well Rested</button>
-                            <button class="card z-depth-0" id="" value="">Slightly Rested</button>
-                            <button class="card z-depth-0" id="" value="">Neutral</button>
-                            <button class="card z-depth-0" id="" value="">Tired</button>
-                            <button class="card z-depth-0" id="" value="">Exhausted</button>    
+        
+                            <form action="#">
+                                    <p>
+                                      <label>
+                                        <input name="group1" type="radio" checked />
+                                        <span>Well Rested</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input name="group1" type="radio" />
+                                        <span>Slightly Rested</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="group1" type="radio"  />
+                                            <span>Neutral</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" name="group1" type="radio"  />
+                                            <span>Tired</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                            <label>
+                                                <input class="with-gap" name="group1" type="radio"  />
+                                                <span>Exhausted</span>
+                                            </label>
+                                        </p>
+                                  </form>  
                         </div>
                     </div>
 
