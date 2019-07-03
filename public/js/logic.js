@@ -10,8 +10,8 @@ $("#register-submit").on("click", function(event) {
   event.preventDefault();
   $(".input-field").trigger("reset");
   userInfo = {
-    name: $("#input-name").val(),
-    userId: $("#input-userId").val(),
+    name: $("#input-username").val(),
+    userId: $("#input-userID").val(),
     password: $("#input-password").val()
   };
   console.log(userInfo);
